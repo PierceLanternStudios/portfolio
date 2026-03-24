@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+
+const photos = [
+  '000028590004.jpg',
+  '000028590012.jpg',
+  '000028590017.jpg',
+  '000028590023.jpg',
+  '000028590035.jpg',
+  '000028590037.jpg',
+  '000028680006.jpg',
+  '000028680010.jpg',
+  '000028680030.jpg',
+  '000091660002.jpg',
+  '000091660017.jpg',
+  '000091660018.jpg',
+  '000091660028.jpg',
+  '000092480011.jpg',
+  '000092480017.jpg',
+  '000092480032.jpg',
+  '02210007.JPG',
+  '0933112-1934-0018.JPG',
+  '0933112-1934-0027.JPG',
+  'B007499-R1-05-6.JPG',
+  'B007499-R1-09-10.JPG',
+  'B007499-R1-12-13.JPG',
+  'B007499-R1-13-14.JPG',
+  'B007499-R1-14-15.JPG',
+  'B007499-R1-20-21.JPG',
+  'B007499-R1-23-24.JPG',
+  'B007499-R1-26-27A.JPG',
+  'B007499-R1-27-28A.JPG',
+  'B007499-R1-29-30A.JPG',
+  'B007499-R1-32-33A.JPG',
+  'B007499-R1-33-34A.JPG',
+  'B007499-R1-34-35A.JPG',
+  'B007499-R1-35-36A.JPG',
+  'F1000007.JPG',
+  'F1000008.JPG',
+  'F1000010.JPG',
+  'F1000013.JPG',
+  'F1000015.JPG',
+  'F1000016.JPG',
+  'F1000017.JPG',
+  'F1000025.JPG',
+  'F1000029.JPG',
+  'IMG-20250210-WA0009.jpg',
+];
+---
+
+<Layout title="Photography">
+  <section class="section">
+    <div class="container">
+      <SectionHeading title="Photography" subtitle="A selection of some of my film photography. Photos were captured on a Ricoh KR-10 (35mm) or a Hasselblad 500elx (120mm). " />
+      <div class="photo-gallery">
+        {photos.map(file => (
+          <figure class="photo-item">
+            <img src={`/images/gallery/${file}`} alt="Photograph by Pierce Clark" loading="lazy" data-lightbox />
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="" />
+  </div>
+
+  <script>
+    const gallery = document.querySelector('.photo-gallery')!;
+    const items = [...gallery.children];
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      gallery.appendChild(items[j]);
+      items[j] = items[i];
+    }
+
+    const lightbox = document.getElementById('lightbox')!;
+    const lightboxImg = lightbox.querySelector('img')!;
+
+    document.querySelectorAll('[data-lightbox]').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = (img as HTMLImageElement).src;
+        lightboxImg.alt = (img as HTMLImageElement).alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</Layout>

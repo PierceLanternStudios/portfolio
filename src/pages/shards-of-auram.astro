@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Shards of Auram">
+  <section class="section">
+    <div class="container">
+      <div class="project-detail">
+        <h1 class="project-detail-title">Shards of Auram</h1>
+        <p>
+          Shards of Auram is my largest project. It is a full-scale video game being designed in
+          Unreal Engine and implemented in C++ and Blueprints. I am the only developer of the
+          project, and I'm making all my own assets.
+        </p>
+
+        <p>There are a few main areas of focus for the project so far:</p>
+        <ul class="project-detail-list">
+          <li><strong>Gameplay Mechanics</strong> — A lot of the implementation so far has gone towards implementing movement mechanics. The game is very fast-paced: movement is essential to the gameplay loop.</li>
+          <li><strong>UI</strong> — A core focus so far has been implementing subtle yet responsive UI. I didn't want the UI to be too overbearing, but I also wanted it to be quick and intuitive to the user.</li>
+          <li><strong>Enemy Design</strong> — A lot of work has been put into creating interesting enemies: I wanted a set of enemies that will make combat challenging and dynamic, requiring the player to think on their feet.</li>
+        </ul>
+
+        <div class="project-detail-gallery">
+          <figure>
+            <img src="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/image.png?w=1024" alt="Shards of Auram gameplay screenshot" loading="lazy" />
+          </figure>
+
+          <figure>
+            <img src="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/image-5.png?w=1024" alt="Flying drone enemy" loading="lazy" />
+            <figcaption>A flying drone enemy currently being implemented, designed to pose more dynamic challenges to the player.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/image-1.png?w=1024" alt="Dynamic UI element" loading="lazy" />
+            <figcaption>A dynamic UI element showing interaction between the 2D UI space and the 3D world space. The popup will dynamically point to the world-space location of the object.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/screenshot_20250122_202306_signal.png?w=1024" alt="Motion capture progress" loading="lazy" />
+            <figcaption>A progress photo during motion-capture for animations. I was a member of an AI beta program enabling real-time markerless motion capture, which formed the basis of most of the character animations.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/image-4.png?w=1024" alt="Player inventory UI" loading="lazy" />
+            <figcaption>A first draft of the player inventory UI. The inventory pane in the middle is dynamic, and the rightmost pane will show the relevant item information.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/broadsword_icon.png?w=1024" alt="Broadsword weapon icon" loading="lazy" />
+            <figcaption>An icon of an in-game weapon, generated using an icon rig to produce reproducible and consistent icons for all items in the game.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/image-6.png?w=951" alt="Light droid enemy during modelling" loading="lazy" />
+            <figcaption>An implemented light droid enemy during modelling stages.</figcaption>
+          </figure>
+        </div>
+
+        <h2>What's Next</h2>
+        <p>
+          There's so much to do with this project — it's by far my favorite thing I've worked on.
+          Right now I'm finishing the AI implementation for the flying drone and working on the
+          path towards implementing a completely functional gameplay loop.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

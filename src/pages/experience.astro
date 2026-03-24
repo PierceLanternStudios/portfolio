@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<Layout title="Experience">
+  <section class="section">
+    <div class="container">
+      <div class="about-intro">
+        <img src="/images/headshot.jpg" alt="Photo of Pierce Clark" class="about-photo" />
+        <div class="about-text">
+          <h1>Pierce Clark</h1>
+          <p class="about-role">Software Engineer at Stainless</p>
+          <p>
+          I'm a software engineer at Stainless, where we're making robust and polished SDKs, docs, and 
+          MCP servers for every API. 
+          </p>
+          <p>
+          I'm one of the founding members of the MCP team, and worked 
+          on the development of an MCP server generator used by Google, Replicate, Telnyx, Pylon, and 
+          many other Stainless customers. I've led research efforts and evaluations leading to a 30% 
+          decrease in MCP server errors and significant performance increases.
+          </p>
+          <p>
+          I also assist our Sales team in closing enterprise deals by delivering MCP demos and
+          being an engineering point-of-contact for prospective customers considering our products.
+          </p>
+          <p>
+            Outside of work, I'm a photographer, game developer, and general tinkerer — always
+            building something new.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <SectionHeading title="Skills" subtitle="Technologies and tools I work with:" />
+      <h4 class="skills-label">Strong in</h4>
+      <div class="skills-grid">
+        <span class="skill-item">TypeScript</span>
+        <span class="skill-item">MCP</span>
+        <span class="skill-item">React</span>
+        <span class="skill-item">Node.js</span>
+        <span class="skill-item">Python</span>
+        <span class="skill-item">C++</span>
+        <span class="skill-item">Git</span>
+        <span class="skill-item">Unreal Engine</span>
+        <span class="skill-item">REST APIs</span>
+        <span class="skill-item">Linux/Bash</span>
+        <span class="skill-item">Docker</span>
+        <span class="skill-item">PostgreSQL</span>
+      </div>
+      <h4 class="skills-label">Familiar with</h4>
+      <div class="skills-grid">
+        <span class="skill-item">Java</span>
+        <span class="skill-item">Jira</span>
+        <span class="skill-item">Figma</span>
+        <span class="skill-item">MATLAB</span>
+        <span class="skill-item">Unity</span>
+      </div>
+    </div>
+  </section>
+</Layout>

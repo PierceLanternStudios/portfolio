@@ -1,0 +1,20 @@
+---
+interface Props {
+  minimal?: boolean;
+}
+
+const { minimal = false } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="container">
+    {!minimal && (
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/pierce-clark/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:pierceclark07@gmail.com">Email</a>
+        <a href="https://github.com/PierceLanternStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    )}
+    <p>All photographs on this site were taken by Pierce Clark.</p>
+  </div>
+</footer>

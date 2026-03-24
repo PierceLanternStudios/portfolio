@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout title="Projects">
+  <section class="section">
+    <div class="container">
+      <SectionHeading title="Projects" subtitle="A collection of some of my personal projects. Some projects here are quite old and are included for posterity." />
+
+      <h3 class="project-category">Game Development</h3>
+      <a href="/shards-of-auram" class="project-featured">
+        <img src="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/fullartlogo.png?w=1024" alt="Shards of Auram" class="project-featured-image" />
+        <div class="project-featured-overlay">
+          <h3>Shards of Auram</h3>
+          <p>A full-scale game being solo developed in Unreal Engine. Features fast-paced movement mechanics, responsive UI, and dynamic enemy AI — all with custom assets.</p>
+          <div class="tags">
+            <span class="tag">Unreal Engine</span>
+            <span class="tag">C++</span>
+            <span class="tag">Blueprints</span>
+          </div>
+        </div>
+      </a>
+
+      <h3 class="project-category">Early React Projects</h3>
+      <div class="project-grid">
+        <ProjectCard
+          title="Minesweeper"
+          description="A classic game complete with custom assets, artwork, and quality-of-life features. Includes seed selection and auto-fill features."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/07/image-3.png?w=1024"
+          tags={['React', 'JavaScript']}
+          link="https://piercelanternstudios.github.io/minesweeper/"
+        />
+        <ProjectCard
+          title="Word Scramble"
+          description="A word-unscramble game with an intense focus on quality-of-life. All styling was done using CSS."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/07/image-4.png?w=587"
+          tags={['React', 'CSS']}
+          link="https://piercelanternstudios.github.io/word-scramble/"
+        />
+        <ProjectCard
+          title="Rock, Paper, Scissors"
+          description="An exploratory game versus a computer opponent. Focuses were fundamental React/TS principles, styling, and quality-of-life."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/07/image-6.png?w=583"
+          tags={['React', 'TypeScript', 'CSS']}
+          link="https://piercelanternstudios.github.io/rps-plus/"
+        />
+      </div>
+
+      <h3 class="project-category">Code Projects</h3>
+      <div class="project-grid">
+        <ProjectCard
+          title="MealBot"
+          description="A program designed to simplify dining at Tufts University. Retrieves menus from dining halls and displays them in group chats for convenient browsing."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/untitled-1-1.png?w=469"
+          tags={['Python', 'Automation']}
+        />
+        <ProjectCard
+          title="Radar Sweeper"
+          description="A radar scanning system designed to detect distances to nearby surroundings. Powered by an Arduino UNO microcontroller."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/untitled-1-01.jpg?w=512"
+          tags={['Arduino', 'Hardware']}
+        />
+        <ProjectCard
+          title="RPNcalc"
+          description="A Turing-complete reverse-polish-notation calculator. Performs operations on integers, strings, and booleans — a fully functional programming language and interpreter."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/screenshot-2025-01-22-201137.png?w=704"
+          tags={['C++', 'Interpreter']}
+        />
+        <ProjectCard
+          title="Genius Star Solver"
+          description="A solver for the Genius Star board game puzzle. Conclusively determines whether solutions exist for any given board design or state."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/screenshot-2025-01-22-201521.png?w=610"
+          tags={['Algorithms', 'Solver']}
+        />
+      </div>
+
+      <h3 class="project-category">Artistic Projects</h3>
+      <div class="project-grid">
+        <ProjectCard
+          title="Fox Render"
+          description="A rendering of a forest scene using custom-scanned assets from near my home."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/render4-1.png?w=1024"
+          tags={['3D Rendering']}
+        />
+        <ProjectCard
+          title="Lantern Render"
+          description="A quick render intended to be used as a profile picture for digital applications."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/render-10-low.png?w=1024"
+          tags={['3D Rendering']}
+        />
+        <ProjectCard
+          title="Oil Rig Render"
+          description="An in-progress render which will ultimately be used as part of a poster design."
+          image="https://pierceclarkprojects.wordpress.com/wp-content/uploads/2025/01/screenshot-2025-01-22-203205.png?w=1024"
+          tags={['3D Rendering', 'In Progress']}
+        />
+      </div>
+    </div>
+  </section>
+</Layout>
